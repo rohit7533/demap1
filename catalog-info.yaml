@@ -8,7 +8,7 @@ metadata:
     backstage.io/managed-by-origin-location: url:https://github.com/rohit7533/demap1
     tekton.dev/pipelines: demo/demap1-pipeline # Namespace/PipelineName
     backstage.io/kubernetes-id: "demap1"
-    backstage.io/kubernetes-cluster: 'bsidp-cluster'
+    backstage.io/kubernetes-cluster: 'docker-desktop'
     backstage.io/kubernetes-namespace: 'demo'
     tektonci/enabled: 'true'
     tektonci/namespace: 'demo'
