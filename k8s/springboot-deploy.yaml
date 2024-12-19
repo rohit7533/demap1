@@ -4,11 +4,6 @@ metadata:
   name: demap1
   namespace: demo
   labels:
-<<<<<<< HEAD
-    #tekton.dev/pipelines: default/springboot-pipeline
-=======
-    #tekton.dev/pipelines: demo/springboot-pipeline
->>>>>>> 5b23e914d61ee7784fd1659906fbf3797276b8ca
     'backstage.io/kubernetes-id': 'demap1'
 spec:
   replicas: 1
@@ -21,17 +16,11 @@ spec:
         app: demap1
         'backstage.io/kubernetes-id': 'demap1'
     spec:
-<<<<<<< HEAD
       imagePullSecrets:
       - name: registry-auth
       containers:
         - name: demap1
           image: idpdeveacr.azurecr.io/pet-clinic:latest
-=======
-      containers:
-        - name: demap1
-          image: backstagdeveacr.azurecr.io/demap1:latest
->>>>>>> 5b23e914d61ee7784fd1659906fbf3797276b8ca
           ports:
             - containerPort: 8080
 ---
@@ -47,8 +36,5 @@ spec:
     - name: http
       port: 80
       targetPort: 8080
-<<<<<<< HEAD
   type: NodePort
-=======
-  type: NodePort
->>>>>>> 5b23e914d61ee7784fd1659906fbf3797276b8ca
+
