@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1beta1
+kind: Component
+metadata:
+  name:  "demap1"
+  description: sample
+  annotations:
+    backstage.io/managed-by-location: url:https://github.com/rohit7533/demap1
+    backstage.io/managed-by-origin-location: url:https://github.com/rohit7533/demap1
+    tekton.dev/pipelines: default/demap1-pipeline # Namespace/PipelineName
+    backstage.io/kubernetes-id: "demap1"
+    backstage.io/kubernetes-cluster: 'bsidp-cluster'
+    backstage.io/kubernetes-namespace: 'default'
+    tektonci/enabled: 'true'
+    tektonci/namespace: 'deafult'
+    # github.com/project-slug: rohit7533/terraform-aks
+    # terraform/workspaces:  #NodeJSAks
+    # terraform/organization:  
+spec:
+  type: service
+  owner: "rohit7533"
+  lifecycle: production

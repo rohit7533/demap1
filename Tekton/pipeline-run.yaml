@@ -1,0 +1,29 @@
+apiVersion: tekton.dev/v1beta1
+kind: PipelineRun
+metadata:
+  name: demap1-pipeline-run
+  annotations:
+    'backstage.io/tekton-pipeline': demap1-pipeline-run
+spec:
+  pipelineRef:
+    name: demap1-pipeline
+  serviceAccountName: default
+  params:
+    - name: repo_url
+      value: "https://github.com/rohit7533/demap1.git"
+    - name: image
+      value: "backstagdeveacr.azurecr.io/demap1:latest"
+    - name: deployment_manifest
+      value: "/workspace/source/k8s/springboot-deploy.yaml"
+    # - name: helm_chart
+    #   value: "charts/springboot"
+    - name: namespace
+      value: "default"
+  workspaces:
+    - name: shared-workspace
+      volumeClaimTemplate:
+        spec:
+          accessModes: ["ReadWriteOnce"]
+          resources:
+            requests:
+              storage: 1Gi
