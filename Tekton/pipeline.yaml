@@ -2,7 +2,11 @@ apiVersion: tekton.dev/v1beta1
 kind: Pipeline
 metadata:
   name: demap1-pipeline
+<<<<<<< HEAD
   namespace: demo
+=======
+  namespace: "demo"
+>>>>>>> 5b23e914d61ee7784fd1659906fbf3797276b8ca
   annotations:
     'backstage.io/catalog-info': 'demap1-pipeline'
 spec:

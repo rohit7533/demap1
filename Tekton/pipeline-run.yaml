@@ -2,9 +2,15 @@ apiVersion: tekton.dev/v1beta1
 kind: PipelineRun
 metadata:
   name: demap1-pipeline-run
+<<<<<<< HEAD
   namespace: demo
   annotations:
     'backstage.io/tekton-pipeline': demap1-pipeline-run
+=======
+  namespace: "demo"
+  annotations:
+    'backstage.io/tekton-pipeline': demap1-pipeline
+>>>>>>> 5b23e914d61ee7784fd1659906fbf3797276b8ca
 spec:
   pipelineRef:
     name: demap1-pipeline
