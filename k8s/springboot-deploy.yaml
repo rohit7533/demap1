@@ -17,9 +17,11 @@ spec:
         app: demap1
         'backstage.io/kubernetes-id': 'demap1'
     spec:
+      imagePullSecrets:
+      - name: registry-auth
       containers:
         - name: demap1
-          image: backstagdeveacr.azurecr.io/demap1:latest
+          image: idpdeveacr.azurecr.io/pet-clinic:latest
           ports:
             - containerPort: 8080
 ---
