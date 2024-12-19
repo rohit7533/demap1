@@ -2,6 +2,7 @@ apiVersion: tekton.dev/v1beta1
 kind: PipelineRun
 metadata:
   name: demap1-pipeline-run
+  namespace: demo
   annotations:
     'backstage.io/tekton-pipeline': demap1-pipeline-run
 spec:
@@ -18,7 +19,7 @@ spec:
     # - name: helm_chart
     #   value: "charts/springboot"
     - name: namespace
-      value: "default"
+      value: "demo"
   workspaces:
     - name: shared-workspace
       volumeClaimTemplate:
